@@ -31,10 +31,12 @@
             font-size: 15px;
             color: #cac9c9;
             margin: 0 auto;
-            background-color: #080808;
+            background-color: rgba(8, 8, 8, 0.8);
+            /* Leve transparência */
             padding: 40px;
             border-radius: 15px;
-            box-shadow: 0 0px 20px rgb(255, 255, 255);
+            box-shadow: 0 0px 20px rgba(255, 255, 255, 0.5);
+            /* Transparência no box-shadow */
             flex: 1;
         }
 
@@ -88,6 +90,7 @@
 
         .form-container button:hover {
             background-color: #45a049;
+            /* Cor de hover */
         }
 
         #result {
@@ -534,7 +537,8 @@
             <label for="obs">Observações:</label>
             <textarea id="obs" maxlength="230"></textarea>
             <button type="button" onclick="saveObservations()">Salvar</button>
-            <button type="button" id="removeObsButton" onclick="removeObservations()" style="display:none;">Remover</button>
+            <button type="button" id="removeObsButton" onclick="removeObservations()"
+                style="display:none;">Remover</button>
         </div>
 
         <div id="savedObs" style="font-weight: bold; margin-top: 10px;"></div>
@@ -547,7 +551,8 @@
 
         <div class="image-container">
             <label for="watermarkUpload">Carregar Marca d'Água</label>
-            <input type="file" id="watermarkUpload" accept="image/*" onchange="handleImageUpload(event, 'watermarkPreview')">
+            <input type="file" id="watermarkUpload" accept="image/*"
+                onchange="handleImageUpload(event, 'watermarkPreview')">
             <img id="watermarkPreview" class="image-preview" style="display: none;">
         </div>
 
